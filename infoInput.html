@@ -1,24 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="infopagestyle.css">
 <style>
-div.scrollmenu {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
-}
 
-div.scrollmenu a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-}
-
-div.scrollmenu a:hover {
-    background-color: #777;
-}
 </style>	
 
 </head>
@@ -33,13 +18,49 @@ div.scrollmenu a:hover {
 
 <div ng-app="">
  
-<p><h3><b><center>CREATE AN ACCOUNT</center></b></h3></p>
+<p><h3><b><center><u>CREATE AN ACCOUNT</u></center></b></h3></p>
 <p>First Name: <input type="text" ng-model="name"></p>
-<p>Last Name: <input type="text" ng-model="name"></p>
-<p>What type of user are you? <input type="scrollmenu" ng-model="name"></p>
+<p>Last Name: <input type="" ng-model="name"></p>
+<p>What type of user are you? 
+
+<span class="dropdown">
+<button onclick="myFunction()" id= "button1" class="dropbtn">(choose one)</button>
+  <span id="myDropdown" class="dropdown-content">
+    <a onclick="replaceText('Student')" href="#home">Student</a>
+    <a onclick="replaceText('Teacher')" href="#about">Teacher</a>
+    <a onclick="replaceText('Administrator')" href="#contact">Administrator</a>
+  </span>
+</span>
+</p>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function replaceText(position) {
+	document.getElementById("button1").innerHTML = position
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 <p>Username: <input type="text" ng-model="name"></p>
 <p>Password: <input type="Password" ng-model="name"></p>
-<p>Verify Password: <input type="Password" ng-model="name"></p>
 
 
 <p>Submit<input type="submit" ng-model="submit"></p>
