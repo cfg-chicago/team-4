@@ -2,6 +2,10 @@ body {
     background-color: #ffffff;
     font-family: Helvetica, sans-serif;
 }
+
+p {
+    font-family: "Georgia, Times, Serif"
+}
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
