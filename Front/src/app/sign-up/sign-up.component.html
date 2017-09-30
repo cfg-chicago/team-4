@@ -1,0 +1,26 @@
+
+<div class="container">
+
+ 
+<h1>CREATE AN ACCOUNT</h1>
+<label>First Name:</label> 
+<input type="text" [(ngModel)]="firstName">
+<p>Last Name: <input type="text" [(ngModel)]="lastName"></p>
+<p>What type of user are you? 
+
+
+
+<select type="string" [(ngModel)]="userType" (ngModelChange)="onChange($event)">
+  <option *ngFor="let userType of userTypes" [value]="userType">{{userType.name}}</option>
+</select>
+
+<p>Username: <input type="text" [(ngModel)]="username"></p>
+<p>Password: <input type="Password" [(ngModel)]="password"></p>
+
+
+<button type="submit" class="btn btn-primary" >Submit</button>
+
+
+</div>
+
+
