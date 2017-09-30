@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<head>
+<style>
+div.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+</style>	
+
+</head>
 <body>
+<div class="scrollmenu">
+  <a href="#home">Home</a>
+  <a href="#home">About Us</a>
+  <a href="#login">Login</a>
+  <a href="#createanaccount">Create an Account</a>
+</div>
+
 
 <div ng-app="">
  
-<p>Create an Account:</p>
+<p><h3><b><center>CREATE AN ACCOUNT</center></b></h3></p>
 <p>First Name: <input type="text" ng-model="name"></p>
 <p>Last Name: <input type="text" ng-model="name"></p>
-<p>What type of user are you? <input type="text" ng-model="name"></p>
-<p>Name: <input type="text" ng-model="name"></p>
-<p>Name: <input type="text" ng-model="name"></p>
-<p>Name: <input type="text" ng-model="name"></p>
+<p>What type of user are you? <input type="scrollmenu" ng-model="name"></p>
+<p>Username: <input type="text" ng-model="name"></p>
+<p>Password: <input type="Password" ng-model="name"></p>
+<p>Verify Password: <input type="Password" ng-model="name"></p>
+
+
+<p>Submit<input type="submit" ng-model="submit"></p>
 
 
 </div>
