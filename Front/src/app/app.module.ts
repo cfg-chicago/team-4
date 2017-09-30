@@ -10,6 +10,7 @@ import { Router } from './app.routing';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
-    ProfileComponent
+    ProfileComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
