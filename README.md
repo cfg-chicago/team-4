@@ -1,3 +1,8 @@
+Server: 54.157.254.7
+Username: force
+password: Team4
+
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
