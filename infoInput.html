@@ -24,11 +24,11 @@
 <p>What type of user are you? 
 
 <span class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+<button onclick="myFunction()" id= "button1" class="dropbtn">(choose one)</button>
   <span id="myDropdown" class="dropdown-content">
-    <a href="#home">Student</a>
-    <a href="#about">Teacher</a>
-    <a href="#contact">Administrator</a>
+    <a onclick="replaceText('Student')" href="#home">Student</a>
+    <a onclick="replaceText('Teacher')" href="#about">Teacher</a>
+    <a onclick="replaceText('Administrator')" href="#contact">Administrator</a>
   </span>
 </span>
 </p>
@@ -38,6 +38,10 @@
 toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function replaceText(position) {
+	document.getElementById("button1").innerHTML = position
 }
 
 // Close the dropdown if the user clicks outside of it
@@ -57,7 +61,6 @@ window.onclick = function(event) {
 </script>
 <p>Username: <input type="text" ng-model="name"></p>
 <p>Password: <input type="Password" ng-model="name"></p>
-<p>Verify Password: <input type="Password" ng-model="name"></p>
 
 
 <p>Submit<input type="submit" ng-model="submit"></p>
