@@ -1,4 +1,7 @@
 body {
     background-image: url("./hypnotize.png");
     background-repeat: repeat;
+
+    background-length: x8b0 , x3a0;
+    background-color: carbon;
 }
